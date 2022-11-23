@@ -7,7 +7,7 @@
     <title>GameStudio</title>
     <style>
       @font-face {
-        font-family: headingFont;
+        font-family: myfont;
         src: url('assets/heading.woff2');
       }
 
@@ -20,6 +20,7 @@
       html {
         font-family: sans-serif;
         line-height: 1.6;
+        color: hsl(210, 50%, 15%);
       }
 
       img {
@@ -39,7 +40,7 @@
       h2 {
         text-align: center;
         font-size: 2.5rem;
-        font-family: headingFont, sans-serif;
+        font-family: myfont, sans-serif;
       }
 
       #team,
@@ -56,7 +57,7 @@
       #games h2,
       #careers h2,
       #contact h2 {
-        padding-bottom: 0.5rem;
+        padding-bottom: 1rem;
       }
 
       /* ----- OUR GAMES ----- */
@@ -145,9 +146,17 @@
       }
 
       #team .cards > article {
-        background-color: hsl(207, 36%, 97%);
+        background-color: hsl(210, 36%, 97%);
         border-radius: 10px;
         padding-bottom: 1rem;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      #team .cards > article > img {
+        object-fit: cover;
+        height: 300px;
+        border-radius: 10px;
       }
 
       #team .cards > article > h3 {
@@ -164,10 +173,101 @@
         gap: 0.75rem;
         justify-content: center;
       }
+
+      /* ----- CONTACT US ----- */
+
+      #contact {
+        margin-bottom: 40rem;
+      }
+
+      #contact .wrap {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr;
+        gap: 5rem;
+      }
+
+      #contact form {
+        background-color: hsl(210, 17%, 93%);
+        padding: 4rem 3rem;
+        border-radius: 10px;
+      }
+
+      #contact label {
+        display: block;
+      }
+
+      #contact label {
+        font-weight: 600;
+        margin-bottom: 0.4rem;
+      }
+
+      #contact input,
+      #contact textarea {
+        display: block;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        outline: none;
+        border: 1px solid hsl(210, 18%, 64%);
+      }
+
+      #contact input:focus,
+      #contact textarea:focus {
+        border: 1px solid hsl(210, 94%, 42%);
+      }
+
+      #contact button {
+        background-color: hsl(210, 31%, 22%);
+        color: hsl(255, 11%, 92%);
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 2rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      #contact button:hover {
+        background-color: hsl(207, 31%, 32%);
+      }
+
+      #contact textarea {
+        resize: vertical;
+      }
+
+      #contact .other {
+        margin-top: 1rem;
+      }
+
+      #contact .phone-mail {
+        margin-top: 1rem;
+        border: 1px solid hsl(207, 31%, 32%);
+        border-radius: 10px;
+        padding: 2rem;
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      #contact .phone-mail article {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      #contact .phone-mail h4 {
+        font-size: 1.25rem;
+      }
+      #contact .phone-mail p {
+        font-size: 1.1rem;
+      }
     </style>
   </head>
 
   <body>
+    <!-- maldivian based game dev studio  -->
     <section id="games">
       <h2>Our Games</h2>
       <div class="cards">
@@ -211,13 +311,13 @@
     <section id="team">
       <h2>Our Team</h2>
       <p>
-        We have passionated team of individuals who have made great experiences
-        to gamers all over the world
+        We have a passionate team of individuals who have made great experiences
+        for gamers all over the world
       </p>
       <div class="cards">
         <article>
-          <img src="assets/img/team-member-1.png" alt="" />
-          <h3>David Byrd</h3>
+          <img src="assets/img/team-1.jpg" alt="" />
+          <h3>Mohammad Ali</h3>
           <p>Co-founder / CEO</p>
           <div class="socials">
             <a target="_blank" title="twitter" href="https://twitter.com"
@@ -232,51 +332,57 @@
           </div>
         </article>
         <article>
-          <img src="assets/img/team-member-4.png" alt="" />
-          <h3>Vincent Paul</h3>
-          <p>Co-founder / CTO</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
+          <img src="assets/img/team-2.jpg" alt="" />
+          <div>
+            <h3>Ibrahim Ali</h3>
+            <p>Co-founder / CTO</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
           </div>
         </article>
         <article>
-          <img src="assets/img/team-member-3.png" alt="" />
-          <h3>Grant Owen</h3>
-          <p>Game Design Lead</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
+          <img src="assets/img/team-3.jpg" alt="" />
+          <div>
+            <h3>Adam Idrees</h3>
+            <p>Game Design Lead</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
           </div>
         </article>
         <article>
-          <img src="assets/img/team-member-2.png" alt="" />
-          <h3>Wilma Reid</h3>
-          <p>Lead Artist</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
+          <img src="assets/img/team-4.jpg" alt="" />
+          <div>
+            <h3>Aishath Ahmad</h3>
+            <p>Lead Artist</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
           </div>
         </article>
       </div>
@@ -284,7 +390,7 @@
 
     <section id="careers">
       <h2>Join Us</h2>
-      <p>Wanna start your gamedev career with us? Join us</p>
+      <p>Wanna start your game dev career with us? Join us</p>
       <div class="careers-cards">
         <article>
           <h3>Junior Game Developer</h3>
@@ -313,18 +419,42 @@
     <section id="contact">
       <h2>Contact Us</h2>
 
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" />
+      <div class="wrap">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
 
-        <label for="message">Message</label>
-        <textarea id="message"></textarea>
+          <label for="message">Message</label>
+          <textarea id="message"></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
+          <button type="submit">Send Message</button>
+        </form>
+
+        <section class="other">
+          <h3>Or contact us directly</h3>
+
+          <div class="phone-mail">
+            <article>
+              <img src="assets/icons/phone.svg" alt="phone" />
+              <div>
+                <h4>Phone</h4>
+                <p>(960) 777-7777</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="assets/icons/mail.svg" alt="email" />
+              <div>
+                <h4>Email</h4>
+                <p>contact@example.com</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
     </section>
   </body>
 </html>
