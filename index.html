@@ -8,7 +8,7 @@
     <style>
       @font-face {
         font-family: myfont;
-        src: url('assets/heading.woff2');
+        src: url('assets/fonts/heading.woff2');
       }
 
       * {
@@ -35,6 +35,7 @@
       a {
         text-decoration: none;
         display: block;
+        color: hsl(210, 50%, 15%);
       }
 
       h2 {
@@ -57,7 +58,7 @@
       #games h2,
       #careers h2,
       #contact h2 {
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
       }
 
       /* ----- OUR GAMES ----- */
@@ -66,7 +67,6 @@
         display: grid;
         gap: 1.5rem;
       }
-
       @media (min-width: 800px) {
         #games .cards {
           grid-template-columns: repeat(2, 1fr);
@@ -81,7 +81,7 @@
         position: relative;
       }
 
-      #games .description {
+      #games .details {
         background-color: hsla(219, 6%, 43%, 0.704);
         color: white;
         border-radius: 10px;
@@ -97,25 +97,31 @@
         justify-content: center;
       }
 
-      #games .description > div {
+      #games .details > div {
         display: grid;
         gap: 0.5rem;
       }
 
-      #games .description .btns {
+      #games .details .btns {
         display: flex;
         gap: 0.5rem;
       }
 
-      #games .description > img {
+      #games .details > img {
         display: none;
         width: 100px;
       }
-
       @media (min-width: 450px) {
-        #games .description > img {
+        #games .details > img {
           display: block;
         }
+      }
+
+      /* ----- OUR TEAM ----- */
+
+      .subtitle {
+        max-width: 50ch;
+        margin-inline: auto;
       }
 
       #team h3,
@@ -125,20 +131,16 @@
         margin-inline: auto;
       }
 
-      /* ----- OUR TEAM ----- */
-
       #team .cards {
         margin-top: 1rem;
         display: grid;
         gap: 2rem;
       }
-
-      @media (min-width: 400px) {
+      @media (min-width: 450px) {
         #team .cards {
           grid-template-columns: repeat(2, 1fr);
         }
       }
-
       @media (min-width: 800px) {
         #team .cards {
           grid-template-columns: repeat(4, 1fr);
@@ -182,8 +184,17 @@
 
       #contact .wrap {
         display: grid;
-        grid-template-columns: 1.3fr 1fr;
-        gap: 5rem;
+        gap: 2rem;
+      }
+      @media (min-width: 800px) {
+        #contact .wrap {
+          grid-template-columns: 1.3fr 1fr;
+        }
+      }
+      @media (min-width: 1200px) {
+        #contact .wrap {
+          gap: 4rem;
+        }
       }
 
       #contact form {
@@ -301,6 +312,67 @@
       nav li a:hover {
         color: hsl(210, 48%, 50%);
       }
+
+      /* ---- Career ---- */
+      #careers .cards {
+        display: grid;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      #careers .cards > article {
+        background-color: hsl(210, 31%, 95%);
+        border-radius: 10px;
+        padding: 1rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      #careers .cards > article > a {
+        font-size: 0.95rem;
+        border-bottom: 2px solid;
+      }
+
+      #careers .cards > article > a:hover {
+        color: hsl(210, 55%, 46%);
+        font-weight: 600;
+      }
+
+      #careers .tags {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      #careers .tags a {
+        background-color: hsl(210, 0%, 100%);
+        padding: 0.4rem;
+        border-radius: 10px;
+        font-size: 0.9rem;
+      }
+
+      #careers .tags a:hover {
+        background-color: hsl(210, 20%, 92%);
+      }
+
+      #careers .btn {
+        background-color: hsl(210, 49%, 28%);
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem;
+        border-radius: 10px;
+        width: 190px;
+        text-align: center;
+        margin-inline: auto;
+        margin-top: 1.75rem;
+        transition: 0.15s;
+      }
+
+      #careers .btn:hover {
+        background-color: hsl(210, 89%, 58%);
+      }
     </style>
   </head>
 
@@ -318,11 +390,11 @@
       </nav>
     </header>
     <section id="games">
-      <h2>Our Games</h2>
+      <h2>Featured Games</h2>
       <div class="cards">
         <article>
           <img src="assets/img/botworld.png" alt="" />
-          <div class="description">
+          <div class="details">
             <img src="assets/img/botworld.png" alt="" />
             <div>
               <h3>BotWorld Adventure</h3>
@@ -339,7 +411,7 @@
         </article>
         <article>
           <img src="assets/img/knighthood.png" alt="" />
-          <div class="description">
+          <div class="details">
             <img src="assets/img/knighthood.png" alt="" />
             <div>
               <h3>Knighthood: The Knight RPG</h3>
@@ -359,7 +431,7 @@
 
     <section id="team">
       <h2>Our Team</h2>
-      <p>
+      <p class="subtitle">
         We have a passionate team of individuals who have made great experiences
         for gamers all over the world
       </p>
@@ -433,28 +505,30 @@
 
     <section id="careers">
       <h2>Join Us</h2>
-      <p>Wanna start your game dev career with us? Join us</p>
-      <div class="careers-cards">
+      <p class="subtitle">
+        Wanna start your game dev career with us? Or are you already an
+        experienced developer looking for a job? Join us
+      </p>
+      <div class="cards">
         <article>
           <h3>Junior Game Developer</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
-            laudantium sint. Ut doloremque facere perspiciatis voluptatum? Velit
-            assumenda voluptates consequuntur?
-          </p>
-          <a href="#">See Detials</a>
+          <div class="tags">
+            <a href="#">junior</a href="#">
+            <a href="#">developer</a href="#">
+            <a href="#">C#</a href="#">
+          </div>
+          <a href="#">View Details</a>
         </article>
         <article>
           <h3>Game Designer Intern</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta,
-            laudantium sint. Ut doloremque facere perspiciatis voluptatum? Velit
-            assumenda voluptates consequuntur?
-          </p>
-          <a href="#">See Detials</a>
+          <div class="tags">
+            <a href="#">designer</a href="#">
+            <a href="#">intern</a href="#">
+          </div>
+          <a href="#">View Details</a>
         </article>
       </div>
-      <a href="#">View More Jobs</a>
+      <a class="btn" href="#">Explore Careers</a>
     </section>
 
     <section id="gallery"></section>
