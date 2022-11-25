@@ -102,6 +102,8 @@
 
       #comments .comment-list {
         margin-top: 1.5rem;
+        display: grid;
+        gap: 1rem;
       }
 
       #comments .comment {
@@ -109,6 +111,27 @@
         padding: 1rem;
         border-radius: 10px;
         
+      }
+
+      #comments .comment:not(.level-2) {
+        margin-top: 1rem;
+      }
+
+      #comments .comment.level-2 {
+        margin-left: 3rem;
+        position: relative;
+      }
+      #comments .comment.level-2::before {
+        content: '';
+        position: absolute;
+        border-left: 1px solid;
+        inset: 0;
+        left: -20px;
+        color: hsl(220, 20%, 90%);
+      }
+
+      #comments .comment.level-2 .reply-btn {
+        display: none;
       }
 
       #comments .comment .header {
@@ -127,6 +150,42 @@
       #comments .comment .time {
         color: hsl(220, 20%, 40%);
         font-size: 0.9rem;
+      }
+
+      #comments .comment .footer {
+        display: flex;
+        gap: 1rem;
+      }
+
+      #comments .react {
+        background-color: hsl(220, 20%, 85%);
+        padding: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        cursor: pointer;
+      }
+
+      #comments .react:hover {
+        background-color: hsl(220, 20%, 90%);
+      }
+
+      #comments .react img {
+        width: 18px;
+      }
+
+      #comments .react span {
+        font-size: 0.9rem;
+      }
+
+      #comments .reply-btn {
+        background-color: hsl(220, 20%, 85%);
+        width: 100px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-left: 1rem;
+      }
+      #comments .reply-btn:hover {
+        background-color: hsl(220, 20%, 90%);
       }
     </style>
   </head>
@@ -186,15 +245,75 @@
           <article class="comment">
             <div class="header">
               <p class="name">Mary Smith</p>
+              <p class="time">4 days ago</p>
+            </div>
+            <div class="main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
+            </div>
+            <div class="footer">
+              <button class="btn react" type="button" title="like"><img src="../assets/icons/thumbs-up.svg" alt=""><span>5</span></button>
+              <button class="btn react" type="button" title="dislike"><img src="../assets/icons/thumbs-down.svg" alt=""><span>1</span></button>
+              <button type="button" class="btn reply-btn">Reply</button>
+            </div>
+          </article>
+
+          <article class="comment level-2">
+            <div class="header">
+              <p class="name">Kevin Adams</p>
+              <p class="time">3 days ago</p>
+            </div>
+            <div class="main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
+            </div>
+            <div class="footer">
+              <button class="btn react" type="button" title="like"><img src="../assets/icons/thumbs-up.svg" alt=""><span>2</span></button>
+              <button class="btn react" type="button" title="dislike"><img src="../assets/icons/thumbs-down.svg" alt=""><span></span></button>
+              <button type="button" class="btn reply-btn">Reply</button>
+            </div>
+          </article>
+
+          <article class="comment level-2">
+            <div class="header">
+              <p class="name">Yoosuf Ali</p>
+              <p class="time">1 day ago</p>
+            </div>
+            <div class="main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
+            </div>
+            <div class="footer">
+              <button class="btn react" type="button" title="like"><img src="../assets/icons/thumbs-up.svg" alt=""><span></span></button>
+              <button class="btn react" type="button" title="dislike"><img src="../assets/icons/thumbs-down.svg" alt=""><span></span></button>
+              <button type="button" class="btn reply-btn">Reply</button>
+            </div>
+          </article>
+
+          <article class="comment">
+            <div class="header">
+              <p class="name">Alice Johnson</p>
+              <p class="time">7 days ago</p>
+            </div>
+            <div class="main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
+            </div>
+            <div class="footer">
+              <button class="btn react" type="button" title="like"><img src="../assets/icons/thumbs-up.svg" alt=""><span>2</span></button>
+              <button class="btn react" type="button" title="dislike"><img src="../assets/icons/thumbs-down.svg" alt=""><span>1</span></button>
+              <button type="button" class="btn reply-btn">Reply</button>
+            </div>
+          </article>
+
+          <article class="comment">
+            <div class="header">
+              <p class="name">Elena Gilbert</p>
               <p class="time">10 days ago</p>
             </div>
             <div class="main">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
             </div>
             <div class="footer">
-              <button>up</button>
-              <button>do</button>
-              <button>Reply</button>
+              <button class="btn react" type="button" title="like"><img src="../assets/icons/thumbs-up.svg" alt=""><span>12</span></button>
+              <button class="btn react" type="button" title="dislike"><img src="../assets/icons/thumbs-down.svg" alt=""><span>2</span></button>
+              <button type="button" class="btn reply-btn">Reply</button>
             </div>
           </article>
         </section>

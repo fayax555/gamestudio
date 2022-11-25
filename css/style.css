@@ -35,6 +35,7 @@ a {
   border-radius: 10px;
   transition: 0.15s;
   text-align: center;
+  border: none;
 }
 
 #hero,
