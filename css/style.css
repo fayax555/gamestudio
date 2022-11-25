@@ -41,11 +41,34 @@ a {
 #team,
 #games,
 #careers,
-#contact {
-  padding-block: 2rem;
+#contact,
+#header {
   max-width: 1300px;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding: 2rem 1rem;
+}
+
+#header {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 800px) {
+  #header {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 800px) {
+  #hero,
+  #team,
+  #games,
+  #careers,
+  #contact,
+  #header {
+    padding: 2rem;
+  }
 }
 
 #team h2,
@@ -273,15 +296,6 @@ a {
 
 /* ---- ---- */
 
-header {
-  display: flex;
-  align-items: center;
-  max-width: 1300px;
-  margin-inline: auto;
-  padding-inline: 2rem;
-  justify-content: space-between;
-}
-
 #logo {
   font-weight: 800;
 }
@@ -312,51 +326,51 @@ nav li a:hover {
 /* ---- Career ---- */
 #careers .cards {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 1.5rem;
 }
+@media (min-width: 800px) {
+  #careers .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-#careers .cards > article {
+#careers .cards > a {
   background-color: hsl(210, 31%, 95%);
   border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 1.5rem;
   display: grid;
   gap: 1rem;
   justify-items: start;
   align-items: center;
 }
-@media (min-width: 700px) {
-  #careers .cards > article {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 1rem 3rem;
-    justify-items: center;
-  }
-}
 
-#careers .cards > article > a {
+#careers .cards > a > span {
   font-size: 0.95rem;
   border-bottom: 2px solid;
+  margin-left: auto;
 }
 
-#careers .cards > article > a:hover {
+#careers .cards > a:hover {
+  background-color: hsl(210, 31%, 90%);
+}
+
+#careers .cards > a:hover span {
   color: hsl(210, 55%, 46%);
   font-weight: 600;
 }
 
-#careers .tags {
-  display: flex;
-  gap: 0.5rem;
+#careers .team {
+  color: hsl(210, 51%, 32%);
+  font-size: 0.8rem;
 }
 
-#careers .tags a {
-  background-color: hsl(210, 0%, 100%);
-  padding: 0.4rem;
-  border-radius: 10px;
-  font-size: 0.9rem;
-}
-
-#careers .tags a:hover {
-  background-color: hsl(210, 20%, 92%);
+#careers .location {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  color: hsl(210, 19%, 38%);
 }
 
 #careers .btn {
@@ -419,7 +433,7 @@ nav li a:hover {
 }
 
 #hero h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.2;
 }
 @media (min-width: 700px) {
