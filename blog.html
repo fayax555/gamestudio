@@ -19,61 +19,158 @@
           font-size: 4rem;
         }
       }
+      #articles {
+        display: grid;
+        gap: 5rem;
+        margin-top: 2rem;
+      }
 
-      #articles a {
+      #articles h2 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      #popular {
+        display: grid;
+        gap: 3rem;
+      }
+      @media (min-width: 800px) {
+        #popular {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      #popular .article {
+        display: grid;
+        border-radius: 10px;
+        transition: 0.15s;
+        gap: 1rem;
+        background-color: hsl(220, 15%, 96%);
+      }
+      #popular .article:hover {
+        background-color: hsl(220, 30%, 90%);
+      }
+
+      #popular .article:hover button {
+        color: hsl(220, 97%, 58%);
+      }
+
+      #popular .wrap {
+        padding: 1.5rem;
+      }
+
+      #popular h3 {
+        font-size: 1.75rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      @media (min-width: 800px) {
+        #latest h3 {
+          font-size: 2rem;
+        }
+      }
+
+      #popular .details {
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      #popular .time,
+      #popular .author {
+        display: grid;
+        grid-template-columns: 12px 1fr;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.85rem;
+      }
+      @media (min-width: 800px) {
+        #popular .time,
+        #popular .author {
+          font-size: 1rem;
+        }
+      }
+
+      #popular button {
+        all: unset;
+        margin-top: 1rem;
+        cursor: pointer;
+        color: hsl(220, 97%, 28%);
+        display: grid;
+        grid-template-columns: 1fr 25px;
+        justify-self: start;
+        align-items: center;
+        gap: 1rem;
+      }
+      @media (min-width: 800px) {
+        #popular button {
+          font-size: 1.25rem;
+        }
+      }
+
+      /* ---- latest ---- */
+
+      #latest {
+        display: grid;
+        gap: 3rem;
+      }
+
+      #latest .article {
         display: grid;
         border-radius: 10px;
         transition: 0.15s;
         gap: 1rem;
       }
       @media (min-width: 800px) {
-        #articles a {
+        #latest .article {
           grid-template-columns: 1fr 1.5fr;
           gap: 2rem;
         }
       }
-      #articles > a:hover {
+      #latest > .article:hover {
         background-color: hsl(220, 20%, 92%);
       }
 
-      #articles .wrap {
+      #latest .wrap {
         display: grid;
         align-items: center;
+        padding: 0.5rem;
       }
 
-      #articles .wrap > p {
+      #latest .wrap > p {
         display: none;
         font-size: 1.2rem;
       }
       @media (min-width: 1200px) {
-        #articles .wrap > p {
+        #latest .wrap > p {
           display: block;
         }
       }
 
-      #articles h2 {
+      #latest h3 {
         font-size: 1.5rem;
         line-height: 1.2;
         margin-bottom: 0.75rem;
       }
       @media (min-width: 800px) {
-        #articles h2 {
-          font-size: 2rem;
+        #latest h3 {
+          font-size: 1.75rem;
         }
       }
 
-      #articles > a > img {
+      .article > img {
         border-radius: 10px;
+        object-fit: cover;
       }
 
-      #articles .details {
+      #latest .details {
         margin-bottom: 1rem;
         display: flex;
         gap: 1.25rem;
       }
 
-      #articles .time,
-      #articles .author {
+      #latest .time,
+      #latest .author {
         display: grid;
         grid-template-columns: 12px 1fr;
         align-items: center;
@@ -81,7 +178,7 @@
         font-size: 0.8rem;
       }
 
-      #articles button {
+      #latest button {
         all: unset;
         cursor: pointer;
         color: hsl(220, 97%, 28%);
@@ -92,12 +189,12 @@
         gap: 1rem;
       }
       @media (min-width: 800px) {
-        #articles button {
+        #latest button {
           font-size: 1.25rem;
         }
       }
 
-      #articles > a:hover button {
+      #latest > .article:hover button {
         color: hsl(220, 97%, 58%);
       }
     </style>
@@ -122,35 +219,163 @@
       <p>Home > Blog</p>
     </section>
 
-    <section id="articles">
-      <a href="#">
-        <img src="assets/img/b2.jpg" alt="" />
-        <div class="wrap">
-          <div>
-            <h2>Best RPG Games to Play in 2022</h2>
-            <div class="details">
-              <div class="author">
-                <img src="assets/icons/person.svg" alt="" /><span
-                  >John Doe</span
-                >
+    <main id="articles">
+      <section>
+        <h2>Popular</h2>
+
+        <div id="popular">
+          <a class="article" href="#">
+            <img src="assets/img/fantasy.jpg" alt="" />
+            <div class="wrap">
+              <div>
+                <h3>Best Fantasy RPG Games to Play in 2022</h3>
+                <div class="details">
+                  <div class="author">
+                    <img src="assets/icons/person.svg" alt="" /><span
+                      >John Doe</span
+                    >
+                  </div>
+                  <div class="time">
+                    <img src="assets/icons/clock.svg" alt="" />
+                    <p>November 20, 2022</p>
+                  </div>
+                </div>
               </div>
-              <div class="time">
-                <img src="assets/icons/clock.svg" alt="" />
-                <p>November 20, 2022</p>
-              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quibusdam sed commodi ipsum inventore? Cupiditate soluta est
+                fuga pariatur dolore asperiores.
+              </p>
+              <button class="btn" type="button">
+                <span> Read Article </span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </button>
             </div>
-          </div>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
-            sed commodi ipsum inventore? Cupiditate soluta est fuga pariatur
-            dolore asperiores.
-          </p>
-          <button class="btn" type="button">
-            <span> Read Article </span>
-            <img src="assets/icons/arrow-right.svg" alt="" />
-          </button>
+          </a>
+
+          <a class="article" href="#">
+            <img src="assets/img/fantasy.jpg" alt="" />
+            <div class="wrap">
+              <div>
+                <h3>Best Fantasy RPG Games to Play in 2022</h3>
+                <div class="details">
+                  <div class="author">
+                    <img src="assets/icons/person.svg" alt="" /><span
+                      >John Doe</span
+                    >
+                  </div>
+                  <div class="time">
+                    <img src="assets/icons/clock.svg" alt="" />
+                    <p>November 20, 2022</p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quibusdam sed commodi ipsum inventore? Cupiditate soluta est
+                fuga pariatur dolore asperiores.
+              </p>
+              <button class="btn" type="button">
+                <span> Read Article </span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </button>
+            </div>
+          </a>
         </div>
-      </a>
-    </section>
+      </section>
+
+      <section>
+        <h2>Latest</h2>
+
+        <div id="latest">
+          <a class="article" href="#">
+            <img src="assets/img/fantasy.jpg" alt="" />
+            <div class="wrap">
+              <div>
+                <h3>Best Fantasy RPG Games to Play in 2022</h3>
+                <div class="details">
+                  <div class="author">
+                    <img src="assets/icons/person.svg" alt="" /><span
+                      >John Doe</span
+                    >
+                  </div>
+                  <div class="time">
+                    <img src="assets/icons/clock.svg" alt="" />
+                    <p>November 20, 2022</p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quibusdam sed commodi ipsum inventore? Cupiditate soluta est
+                fuga pariatur dolore asperiores.
+              </p>
+              <button class="btn" type="button">
+                <span> Read Article </span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </button>
+            </div>
+          </a>
+
+          <a class="article" href="#">
+            <img src="assets/img/fantasy.jpg" alt="" />
+            <div class="wrap">
+              <div>
+                <h3>Best Fantasy RPG Games to Play in 2022</h3>
+                <div class="details">
+                  <div class="author">
+                    <img src="assets/icons/person.svg" alt="" /><span
+                      >John Doe</span
+                    >
+                  </div>
+                  <div class="time">
+                    <img src="assets/icons/clock.svg" alt="" />
+                    <p>November 20, 2022</p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quibusdam sed commodi ipsum inventore? Cupiditate soluta est
+                fuga pariatur dolore asperiores.
+              </p>
+              <button class="btn" type="button">
+                <span> Read Article </span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </button>
+            </div>
+          </a>
+
+          <a class="article" href="#">
+            <img src="assets/img/fantasy.jpg" alt="" />
+            <div class="wrap">
+              <div>
+                <h3>Best Fantasy RPG Games to Play in 2022</h3>
+                <div class="details">
+                  <div class="author">
+                    <img src="assets/icons/person.svg" alt="" /><span
+                      >John Doe</span
+                    >
+                  </div>
+                  <div class="time">
+                    <img src="assets/icons/clock.svg" alt="" />
+                    <p>November 20, 2022</p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quibusdam sed commodi ipsum inventore? Cupiditate soluta est
+                fuga pariatur dolore asperiores.
+              </p>
+              <button class="btn" type="button">
+                <span> Read Article </span>
+                <img src="assets/icons/arrow-right.svg" alt="" />
+              </button>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
