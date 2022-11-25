@@ -1,0 +1,441 @@
+@font-face {
+  font-family: myfont;
+  src: url('../assets/fonts/heading.woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: hsl(210, 50%, 15%);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: hsl(210, 50%, 15%);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: myfont, sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.15s;
+  text-align: center;
+}
+
+#hero,
+#team,
+#games,
+#careers,
+#contact {
+  padding-block: 2rem;
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+#team h2,
+#games h2,
+#careers h2,
+#contact h2 {
+  padding-bottom: 0.5rem;
+}
+
+/* ----- OUR GAMES ----- */
+
+#games .cards {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 800px) {
+  #games .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#games .cards img {
+  border-radius: 10px;
+}
+
+#games .cards article {
+  position: relative;
+}
+
+#games .details {
+  background-color: hsla(219, 6%, 43%, 0.704);
+  color: white;
+  border-radius: 10px;
+  z-index: 1;
+  margin-inline: auto;
+  padding: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+}
+
+#games .details > div {
+  display: grid;
+  gap: 0.5rem;
+}
+
+#games .details .btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#games .details > img {
+  display: none;
+  width: 100px;
+}
+@media (min-width: 450px) {
+  #games .details > img {
+    display: block;
+  }
+}
+
+/* ----- OUR TEAM ----- */
+
+#team .subtitle,#careers .subtitle {
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+#team h3,
+#team p {
+  text-align: center;
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+#team .cards {
+  margin-top: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 450px) {
+  #team .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  #team .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+#team .cards > article {
+  background-color: hsl(210, 36%, 97%);
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+#team .cards > article > img {
+  object-fit: cover;
+  height: 300px;
+  border-radius: 10px;
+}
+
+#team .cards > article > h3 {
+  margin-top: 0.8rem;
+}
+
+#team .cards > article > p {
+  margin-bottom: 0.3rem;
+}
+
+#team .socials {
+  display: grid;
+  grid-template-columns: repeat(3, 25px);
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* ----- CONTACT US ----- */
+
+#contact {
+  margin-bottom: 40rem;
+}
+
+#contact .wrap {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 800px) {
+  #contact .wrap {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  #contact .wrap {
+    gap: 4rem;
+  }
+}
+
+#contact form {
+  background-color: hsl(210, 17%, 93%);
+  padding: 4rem 3rem;
+  border-radius: 10px;
+}
+
+#contact label {
+  display: block;
+}
+
+#contact label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+#contact input,
+#contact textarea {
+  display: block;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  border: 1px solid hsl(210, 18%, 64%);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border: 1px solid hsl(210, 94%, 42%);
+}
+
+#contact button {
+  background-color: hsl(210, 31%, 22%);
+  color: hsl(255, 11%, 92%);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+#contact button:hover {
+  background-color: hsl(207, 31%, 32%);
+}
+
+#contact textarea {
+  resize: vertical;
+}
+
+#contact .other {
+  margin-top: 1rem;
+}
+
+#contact .phone-mail {
+  margin-top: 1rem;
+  border: 1px solid hsl(207, 31%, 32%);
+  border-radius: 10px;
+  padding: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+#contact .phone-mail article {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+#contact .phone-mail h4 {
+  font-size: 1.25rem;
+}
+#contact .phone-mail p {
+  font-size: 1.1rem;
+}
+
+/* ---- ---- */
+
+header {
+  display: flex;
+  align-items: center;
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  justify-content: space-between;
+}
+
+#logo {
+  font-weight: 800;
+}
+
+nav ol {
+  display: flex;
+  gap: 3rem;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: hsl(210, 31%, 32%);
+  padding-block: 2rem;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav li a:hover {
+  color: hsl(210, 48%, 50%);
+}
+
+/* ---- Career ---- */
+#careers .cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#careers .cards > article {
+  background-color: hsl(210, 31%, 95%);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  align-items: center;
+}
+@media (min-width:700px) {
+  #careers .cards > article {
+    grid-template-columns: repeat(3,1fr);
+    padding: 1rem 3rem;
+    justify-items: center;
+  }
+}
+
+#careers .cards > article > a {
+  font-size: 0.95rem;
+  border-bottom: 2px solid;
+}
+
+#careers .cards > article > a:hover {
+  color: hsl(210, 55%, 46%);
+  font-weight: 600;
+}
+
+#careers .tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#careers .tags a {
+  background-color: hsl(210, 0%, 100%);
+  padding: 0.4rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+#careers .tags a:hover {
+  background-color: hsl(210, 20%, 92%);
+}
+
+#careers .btn {
+  background-color: hsl(210, 49%, 28%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 10px;
+  width: 190px;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 1.75rem;
+  transition: 0.15s;
+}
+
+#careers .btn:hover {
+  background-color: hsl(210, 89%, 58%);
+}
+
+
+/* ---- HERO SECTION ---- */
+.hero-wrap {
+  background: url('../assets/img/hero-bg.webp') no-repeat center center/cover ;
+  height: 100vh;
+  color: hsl(210, 76%, 96%);
+  display: grid;
+  align-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: hsla(210, 98%, 21%, 0.7);
+  height: 100vh;
+  z-index: -1;
+}
+
+#hero .texts {
+  max-width: 80ch;
+  text-align: center;
+  margin-inline: auto;
+}
+
+#hero .texts .subtitle {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.hero-wrap header {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hero-wrap header a {
+  color: hsl(209, 76%, 96%);
+}
+
+#hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+@media (min-width: 700px) {
+  #hero h1 {
+    font-size: 4rem;
+  }
+}
+
+#hero .btn {
+  background-color: hsl(210, 31%, 89%);
+  color: hsl(210, 31%, 19%);
+  font-weight: 600;
+  padding: 0.5rem;
+  width: 190px;
+  margin-inline: auto;
+}
