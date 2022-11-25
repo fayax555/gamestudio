@@ -44,6 +44,14 @@
         font-family: myfont, sans-serif;
       }
 
+      .btn {
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.15s;
+        text-align: center;
+      }
+
+      #hero,
       #team,
       #games,
       #careers,
@@ -119,7 +127,7 @@
 
       /* ----- OUR TEAM ----- */
 
-      .subtitle {
+      #team .subtitle {
         max-width: 50ch;
         margin-inline: auto;
       }
@@ -233,11 +241,9 @@
         background-color: hsl(210, 31%, 22%);
         color: hsl(255, 11%, 92%);
         border: none;
-        border-radius: 10px;
         padding: 0.75rem 2rem;
         font-size: 1.25rem;
         font-weight: 600;
-        cursor: pointer;
       }
 
       #contact button:hover {
@@ -323,12 +329,18 @@
       #careers .cards > article {
         background-color: hsl(210, 31%, 95%);
         border-radius: 10px;
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        justify-items: center;
+        gap: 1rem;
+        justify-items: start;
         align-items: center;
-        justify-content: space-between;
+      }
+      @media (min-width:700px) {
+        #careers .cards > article {
+          grid-template-columns: repeat(3,1fr);
+          padding: 1rem 3rem;
+          justify-items: center;
+        }
       }
       
       #careers .cards > article > a {
@@ -373,12 +385,76 @@
       #careers .btn:hover {
         background-color: hsl(210, 89%, 58%);
       }
+
+
+      /* ---- HERO SECTION ---- */
+      .hero-wrap {
+        background: url('assets/img/hero-bg.webp') no-repeat center center/cover ;
+        height: 100vh;
+        color: hsl(210, 76%, 96%);
+        display: grid;
+        align-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-wrap::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: hsla(210, 98%, 21%, 0.7);
+        height: 100vh;
+        z-index: -1;
+      }
+
+      #hero .texts {
+        max-width: 80ch;
+        text-align: center;
+        margin-inline: auto;
+      }
+
+      #hero .texts .subtitle {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
+      }
+
+      .hero-wrap header {
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      .hero-wrap header a {
+        color: hsl(209, 76%, 96%);
+      }
+
+      #hero h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+      }
+      @media (min-width: 700px) {
+        #hero h1 {
+          font-size: 4rem;
+        }
+      }
+
+      #hero .btn {
+        background-color: hsl(210, 31%, 89%);
+        color: hsl(210, 31%, 19%);
+        font-weight: 600;
+        padding: 0.5rem;
+        width: 190px;
+        margin-inline: auto;
+      }
+
     </style>
   </head>
 
   <body>
     <!-- maldivian based game dev studio  -->
 
+   <div class="hero-wrap">
     <header>
       <span id="logo">LOGO</span>
       <nav>
@@ -389,189 +465,207 @@
         </ol>
       </nav>
     </header>
-    <section id="games">
-      <h2>Featured Games</h2>
-      <div class="cards">
-        <article>
-          <img src="assets/img/botworld.png" alt="" />
-          <div class="details">
+
+    <section id="hero">
+      <div class="texts">
+        <h1>
+          Entertainment Across The World
+        </h1>
+        <p class="subtitle">We are a fast-growing game studio based in Maldives. Our games are played by millions worldwide.</p>
+        <a class="btn" href="#">EXPLORE</a>
+      </div>
+    </section>
+   </div>
+
+
+     
+      <section id="games">
+        <h2>Featured Games</h2>
+        <div class="cards">
+          <article>
             <img src="assets/img/botworld.png" alt="" />
-            <div>
-              <h3>BotWorld Adventure</h3>
-              <div class="btns">
-                <a title="appstore" href=""
-                  ><img src="assets/img/app-store.png" alt=""
-                /></a>
-                <a title="playstore" href="">
-                  <img src="assets/img/play-store.png" alt=""
-                /></a>
+            <div class="details">
+              <img src="assets/img/botworld.png" alt="" />
+              <div>
+                <h3>BotWorld Adventure</h3>
+                <div class="btns">
+                  <a title="appstore" href=""
+                    ><img src="assets/img/app-store.png" alt=""
+                  /></a>
+                  <a title="playstore" href="">
+                    <img src="assets/img/play-store.png" alt=""
+                  /></a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-        <article>
-          <img src="assets/img/knighthood.png" alt="" />
-          <div class="details">
+          </article>
+          <article>
             <img src="assets/img/knighthood.png" alt="" />
-            <div>
-              <h3>Knighthood: The Knight RPG</h3>
-              <div class="btns">
-                <a title="appstore" href=""
-                  ><img src="assets/img/app-store.png" alt=""
-                /></a>
-                <a title="playstore" href="">
-                  <img src="assets/img/play-store.png" alt=""
-                /></a>
+            <div class="details">
+              <img src="assets/img/knighthood.png" alt="" />
+              <div>
+                <h3>Knighthood: The Knight RPG</h3>
+                <div class="btns">
+                  <a title="appstore" href=""
+                    ><img src="assets/img/app-store.png" alt=""
+                  /></a>
+                  <a title="playstore" href="">
+                    <img src="assets/img/play-store.png" alt=""
+                  /></a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
+          </article>
+        </div>
+      </section>
+  
+      <section id="team">
+        <h2>Our Team</h2>
+        <p class="subtitle">
+          We have a passionate team of individuals who have made great experiences
+          for gamers all over the world
+        </p>
+        <div class="cards">
+          <article>
+            <img src="assets/img/team-1.jpg" alt="" />
+            <h3>Mohammad Ali</h3>
+            <p>Co-founder / CEO</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
+          </article>
+          <article>
+            <img src="assets/img/team-2.jpg" alt="" />
+            <h3>Ibrahim Ali</h3>
+            <p>Co-founder / CTO</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
+          </article>
+          <article>
+            <img src="assets/img/team-3.jpg" alt="" />
+            <h3>Adam Idrees</h3>
+            <p>Game Design Lead</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
+          </article>
+          <article>
+            <img src="assets/img/team-4.jpg" alt="" />
+            <h3>Aishath Ahmad</h3>
+            <p>Lead Artist</p>
+            <div class="socials">
+              <a target="_blank" title="twitter" href="https://twitter.com"
+                ><img src="assets/icons/icons8-twitter.svg" alt=""
+              /></a>
+              <a target="_blank" title="github" href="https://github.com">
+                <img src="assets/icons/icons8-github.svg" alt="" />
+              </a>
+              <a target="_blank" title="instagram" href="https://instagram.com">
+                <img src="assets/icons/icons8-instagram.svg" alt="" />
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+  
+      <section id="careers">
+        <h2>Join Us</h2>
+        <p class="subtitle">
+          Wanna start your game dev career with us? Or are you already an
+          experienced developer looking for a job? Join us
+        </p>
+        <div class="cards">
+          <article>
+            <h3>Junior Game Developer</h3>
+            <div class="tags">
+              <a href="#">junior</a href="#">
+              <a href="#">developer</a href="#">
+              <a href="#">C#</a href="#">
+            </div>
+            <a href="#">View Details</a>
+          </article>
+          <article>
+            <h3>Game Designer Intern</h3>
+            <div class="tags">
+              <a href="#">designer</a href="#">
+              <a href="#">intern</a href="#">
+            </div>
+            <a href="#">View Details</a>
+          </article>
+        </div>
+        <a class="btn" href="#">Explore Careers</a>
+      </section>
+  
+      <section id="gallery"></section>
+  
+      <section id="contact">
+        <h2>Contact Us</h2>
+  
+        <div class="wrap">
+          <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" />
+  
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+  
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+  
+            <button class="btn" type="submit">Send Message</button>
+          </form>
+  
+          <section class="other">
+            <h3>Or contact us directly</h3>
+  
+            <div class="phone-mail">
+              <article>
+                <img src="assets/icons/phone.svg" alt="phone" />
+                <div>
+                  <h4>Phone</h4>
+                  <p>(960) 777-7777</p>
+                </div>
+              </article>
+  
+              <article>
+                <img src="assets/icons/mail.svg" alt="email" />
+                <div>
+                  <h4>Email</h4>
+                  <p>contact@example.com</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </section>
 
-    <section id="team">
-      <h2>Our Team</h2>
-      <p class="subtitle">
-        We have a passionate team of individuals who have made great experiences
-        for gamers all over the world
-      </p>
-      <div class="cards">
-        <article>
-          <img src="assets/img/team-1.jpg" alt="" />
-          <h3>Mohammad Ali</h3>
-          <p>Co-founder / CEO</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
-          </div>
-        </article>
-        <article>
-          <img src="assets/img/team-2.jpg" alt="" />
-          <h3>Ibrahim Ali</h3>
-          <p>Co-founder / CTO</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
-          </div>
-        </article>
-        <article>
-          <img src="assets/img/team-3.jpg" alt="" />
-          <h3>Adam Idrees</h3>
-          <p>Game Design Lead</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
-          </div>
-        </article>
-        <article>
-          <img src="assets/img/team-4.jpg" alt="" />
-          <h3>Aishath Ahmad</h3>
-          <p>Lead Artist</p>
-          <div class="socials">
-            <a target="_blank" title="twitter" href="https://twitter.com"
-              ><img src="assets/icons/icons8-twitter.svg" alt=""
-            /></a>
-            <a target="_blank" title="github" href="https://github.com">
-              <img src="assets/icons/icons8-github.svg" alt="" />
-            </a>
-            <a target="_blank" title="instagram" href="https://instagram.com">
-              <img src="assets/icons/icons8-instagram.svg" alt="" />
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
+    <footer>
 
-    <section id="careers">
-      <h2>Join Us</h2>
-      <p class="subtitle">
-        Wanna start your game dev career with us? Or are you already an
-        experienced developer looking for a job? Join us
-      </p>
-      <div class="cards">
-        <article>
-          <h3>Junior Game Developer</h3>
-          <div class="tags">
-            <a href="#">junior</a href="#">
-            <a href="#">developer</a href="#">
-            <a href="#">C#</a href="#">
-          </div>
-          <a href="#">View Details</a>
-        </article>
-        <article>
-          <h3>Game Designer Intern</h3>
-          <div class="tags">
-            <a href="#">designer</a href="#">
-            <a href="#">intern</a href="#">
-          </div>
-          <a href="#">View Details</a>
-        </article>
-      </div>
-      <a class="btn" href="#">Explore Careers</a>
-    </section>
-
-    <section id="gallery"></section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-
-      <div class="wrap">
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name" />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" />
-
-          <label for="message">Message</label>
-          <textarea id="message"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
-
-        <section class="other">
-          <h3>Or contact us directly</h3>
-
-          <div class="phone-mail">
-            <article>
-              <img src="assets/icons/phone.svg" alt="phone" />
-              <div>
-                <h4>Phone</h4>
-                <p>(960) 777-7777</p>
-              </div>
-            </article>
-
-            <article>
-              <img src="assets/icons/mail.svg" alt="email" />
-              <div>
-                <h4>Email</h4>
-                <p>contact@example.com</p>
-              </div>
-            </article>
-          </div>
-        </section>
-      </div>
-    </section>
+    </footer>
   </body>
 </html>
