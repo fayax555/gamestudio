@@ -1,39 +1,74 @@
-#article img {
-  border-radius: 10px;
+#title {
+  text-align: center;
 }
 
-#article h1 {
-  font-size: 1.5rem;
+#title h1 {
+  font-size: 2.5rem;
+}
+@media (min-width: 800px) {
+  #title h1 {
+    font-size: 4rem;
+  }
+}
+#articles {
+  display: grid;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+#articles h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+#popular {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 800px) {
+  #popular {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#popular .article {
+  display: grid;
+  border-radius: 10px;
+  transition: 0.15s;
+  gap: 1rem;
+  background-color: hsl(220, 15%, 96%);
+}
+#popular .article:hover {
+  background-color: hsl(220, 30%, 90%);
+}
+
+#popular .article:hover button {
+  color: hsl(220, 97%, 58%);
+}
+
+#popular .wrap {
+  padding: 1.5rem;
+}
+
+#popular h3 {
+  font-size: 1.75rem;
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
 @media (min-width: 800px) {
-  #article h1 {
-    font-size: 2.5rem;
+  #latest h3 {
+    font-size: 2rem;
   }
 }
 
-#article .cover {
-  min-height: 400px;
-  max-height: 70vh;
-  object-fit: cover;
-}
-
-#article .wrap {
-  margin-top: 1rem;
-  text-align: center;
-  display: grid;
-  justify-items: center;
-}
-
-#article .details {
+#popular .details {
   margin-bottom: 1rem;
   display: flex;
   gap: 1.25rem;
 }
 
-#article .time,
-#article .author {
+#popular .time,
+#popular .author {
   display: grid;
   grid-template-columns: 12px 1fr;
   align-items: center;
@@ -41,151 +76,115 @@
   font-size: 0.85rem;
 }
 @media (min-width: 800px) {
-  #article .time,
-  #article .author {
+  #popular .time,
+  #popular .author {
     font-size: 1rem;
   }
 }
 
-#article .content {
-  margin-top: 3rem;
-  max-width: 70ch;
-  margin-inline: auto;
-  display: grid;
-  gap: 1.5rem;
-}
-
-#article .content p {
-  font-size: 1.1rem;
-}
-
-#comments {
-  max-width: 70ch;
-  margin-inline: auto;
-  margin-top: 3rem;
-  margin-bottom: 30rem;
-}
-
-#comments h2 {
-  font-size: 1.25rem;
-}
-
-#comments form {
-  display: grid;
-  gap: 1rem;
+#popular button {
+  all: unset;
   margin-top: 1rem;
-  margin-bottom: 3rem;
-}
-
-#comments input,
-#comments textarea {
-  display: block;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  border-radius: 10px;
-  border: 1px solid hsl(220, 20%, 50%);
-  resize: vertical;
-}
-
-#comments form button {
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  max-width: 190px;
-  border: none;
-  background-color: hsl(220, 70%, 50%);
-  color: white;
-}
-#comments form button:hover {
-  background-color: hsl(220, 70%, 60%);
-}
-
-#comments .comment-list {
-  margin-top: 0.25rem;
+  cursor: pointer;
+  color: hsl(220, 97%, 28%);
   display: grid;
+  grid-template-columns: 1fr 25px;
+  justify-self: start;
+  align-items: center;
   gap: 1rem;
 }
+@media (min-width: 800px) {
+  #popular button {
+    font-size: 1.25rem;
+  }
+}
 
-#comments .comment {
-  background-color: hsl(220, 20%, 95%);
-  padding: 1rem;
+/* ---- latest ---- */
+
+#latest {
+  display: grid;
+  gap: 3rem;
+}
+
+#latest .article {
+  display: grid;
   border-radius: 10px;
+  transition: 0.15s;
+  gap: 1rem;
+}
+@media (min-width: 800px) {
+  #latest .article {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+  }
+}
+#latest > .article:hover {
+  background-color: hsl(220, 20%, 92%);
 }
 
-#comments .comment:not(.level-2) {
-  margin-top: 0.75rem;
+#latest .wrap {
+  display: grid;
+  align-items: center;
+  padding: 0.5rem;
 }
 
-#comments .comment.level-2 {
-  margin-left: 3rem;
-  position: relative;
-}
-#comments .comment.level-2::before {
-  content: '';
-  position: absolute;
-  border-left: 1px solid;
-  top: 0;
-  bottom: -15px;
-  left: -20px;
-  color: hsl(220, 20%, 90%);
-}
-#comments .comment.level-2.last-reply::before {
-  bottom: 0px;
-}
-
-#comments .comment.level-2 .reply-btn {
+#latest .wrap > p {
   display: none;
+  font-size: 1.2rem;
+}
+@media (min-width: 1200px) {
+  #latest .wrap > p {
+    display: block;
+  }
 }
 
-#comments .comment .header {
+#latest h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 800px) {
+  #latest h3 {
+    font-size: 1.75rem;
+  }
+}
+
+.article > img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#latest .details {
+  margin-bottom: 1rem;
   display: flex;
   gap: 1.25rem;
 }
 
-#comments .comment .main {
-  margin-block: 0.7rem;
+#latest .time,
+#latest .author {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
 }
 
-#comments .comment .name {
-  font-weight: 700;
-}
-
-#comments .comment .time {
-  color: hsl(220, 20%, 40%);
-  font-size: 0.9rem;
-}
-
-#comments .comment .footer {
-  display: flex;
+#latest button {
+  all: unset;
+  cursor: pointer;
+  color: hsl(220, 97%, 28%);
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  justify-self: start;
+  align-items: center;
   gap: 1rem;
 }
-
-#comments .react {
-  background-color: hsl(220, 20%, 85%);
-  padding: 0.5rem;
-  display: flex;
-  gap: 0.5rem;
-  cursor: pointer;
+@media (min-width: 800px) {
+  #latest button {
+    font-size: 1.25rem;
+  }
 }
 
-#comments .react:hover {
-  background-color: hsl(220, 20%, 90%);
-}
-
-#comments .react img {
-  width: 18px;
-}
-
-#comments .react span {
-  font-size: 0.9rem;
-}
-
-#comments .reply-btn {
-  background-color: hsl(220, 20%, 85%);
-  width: 100px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-left: 1rem;
-}
-#comments .reply-btn:hover {
-  background-color: hsl(220, 20%, 90%);
+#latest > .article:hover button {
+  color: hsl(220, 97%, 58%);
 }

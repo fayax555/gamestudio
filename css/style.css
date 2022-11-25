@@ -248,7 +248,6 @@ a {
   outline: none;
   border: 1px solid hsl(220, 18%, 64%);
 }
-
 #contact input:focus,
 #contact textarea:focus {
   border: 1px solid hsl(220, 94%, 42%);
@@ -432,6 +431,8 @@ nav li a:hover {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   font-size: 1.25rem;
+  max-width: 60ch;
+  margin-inline: auto;
 }
 
 .hero-wrap header {
