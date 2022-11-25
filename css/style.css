@@ -12,7 +12,7 @@
 html {
   font-family: sans-serif;
   line-height: 1.6;
-  color: hsl(210, 50%, 15%);
+  color: hsl(220, 50%, 15%);
 }
 
 img {
@@ -27,7 +27,7 @@ ul {
 a {
   text-decoration: none;
   display: block;
-  color: hsl(210, 50%, 15%);
+  color: hsl(220, 50%, 15%);
 }
 
 .btn {
@@ -42,7 +42,9 @@ a {
 #games,
 #careers,
 #contact,
-#header {
+#header,
+#title,
+#articles {
   max-width: 1300px;
   margin-inline: auto;
   padding: 2rem 1rem;
@@ -169,7 +171,7 @@ a {
 }
 
 #team .cards > article {
-  background-color: hsl(210, 36%, 97%);
+  background-color: hsl(220, 36%, 97%);
   border-radius: 10px;
   padding-bottom: 1rem;
   display: grid;
@@ -219,7 +221,7 @@ a {
 }
 
 #contact form {
-  background-color: hsl(210, 17%, 93%);
+  background-color: hsl(220, 17%, 93%);
   padding: 4rem 3rem;
   border-radius: 10px;
 }
@@ -242,16 +244,16 @@ a {
   border-radius: 10px;
   font-size: 1.5rem;
   outline: none;
-  border: 1px solid hsl(210, 18%, 64%);
+  border: 1px solid hsl(220, 18%, 64%);
 }
 
 #contact input:focus,
 #contact textarea:focus {
-  border: 1px solid hsl(210, 94%, 42%);
+  border: 1px solid hsl(220, 94%, 42%);
 }
 
 #contact button {
-  background-color: hsl(210, 31%, 22%);
+  background-color: hsl(220, 31%, 22%);
   color: hsl(255, 11%, 92%);
   border: none;
   padding: 0.75rem 2rem;
@@ -311,7 +313,7 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: hsl(210, 31%, 32%);
+  color: hsl(220, 31%, 32%);
   padding-block: 2rem;
   border-radius: 10px;
   display: block;
@@ -320,7 +322,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: hsl(210, 48%, 50%);
+  color: hsl(220, 48%, 50%);
 }
 
 /* ---- Career ---- */
@@ -336,7 +338,7 @@ nav li a:hover {
 }
 
 #careers .cards > a {
-  background-color: hsl(210, 31%, 95%);
+  background-color: hsl(220, 31%, 95%);
   border-radius: 10px;
   padding: 1.5rem;
   display: grid;
@@ -355,20 +357,20 @@ nav li a:hover {
   gap: 0.25rem;
 }
 #careers .apply:hover {
-  color: hsl(210, 48%, 50%);
+  color: hsl(220, 48%, 50%);
 }
 
 #careers .cards > a:hover {
-  background-color: hsl(210, 31%, 90%);
+  background-color: hsl(220, 31%, 90%);
 }
 
 #careers .cards > a:hover span {
-  color: hsl(210, 55%, 46%);
+  color: hsl(220, 55%, 46%);
   font-weight: 600;
 }
 
 #careers .team {
-  color: hsl(210, 51%, 32%);
+  color: hsl(220, 51%, 32%);
   font-size: 0.8rem;
 }
 
@@ -377,11 +379,11 @@ nav li a:hover {
   grid-template-columns: 12px 1fr;
   gap: 0.75rem;
   align-items: center;
-  color: hsl(210, 19%, 38%);
+  color: hsl(220, 19%, 38%);
 }
 
 #careers .btn {
-  background-color: hsl(210, 49%, 28%);
+  background-color: hsl(220, 49%, 28%);
   color: white;
   font-weight: 600;
   padding: 0.75rem;
@@ -394,14 +396,14 @@ nav li a:hover {
 }
 
 #careers .btn:hover {
-  background-color: hsl(210, 89%, 58%);
+  background-color: hsl(220, 89%, 58%);
 }
 
 /* ---- HERO SECTION ---- */
 .hero-wrap {
   background: url('../assets/img/hero-bg.webp') no-repeat center center/cover;
   height: 100vh;
-  color: hsl(210, 76%, 96%);
+  color: hsl(220, 76%, 96%);
   display: grid;
   align-content: center;
   position: relative;
@@ -412,7 +414,7 @@ nav li a:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: hsla(210, 98%, 21%, 0.7);
+  background-color: hsla(220, 98%, 21%, 0.7);
   height: 100vh;
   z-index: -1;
 }
@@ -450,8 +452,8 @@ nav li a:hover {
 }
 
 #hero .btn {
-  background-color: hsl(210, 31%, 89%);
-  color: hsl(210, 31%, 19%);
+  background-color: hsl(220, 31%, 89%);
+  color: hsl(220, 31%, 19%);
   font-weight: 600;
   padding: 0.5rem;
   width: 190px;
