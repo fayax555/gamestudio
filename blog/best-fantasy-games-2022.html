@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Best Fantasy Games 2022</title>
+
+    <style>
+      #article img {
+        border-radius: 10px;
+      }
+
+      #article h1 {
+        font-size: 2.25rem;
+      }
+
+    
+
+      #article .wrap {
+        margin-top: 1rem;
+        text-align: center;
+        display: grid;
+        justify-items: center;
+      }
+
+      #article .details {
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      #article .time,
+      #article .author {
+        display: grid;
+        grid-template-columns: 12px 1fr;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.85rem;
+      }
+      @media (min-width: 800px) {
+        #article .time,
+        #article .author {
+          font-size: 1rem;
+        }
+      }
+
+      #article .content {
+        margin-top: 3rem;
+        max-width: 70ch;
+        margin-inline: auto;
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      #article .content p {
+        font-size: 1.1rem;
+      }
+
+      #comments {
+        max-width: 70ch;
+        margin-inline: auto;
+        margin-top: 3rem;
+        margin-bottom: 30rem;
+      }
+
+      #comments h2 {
+        font-size: 1.25rem;
+      }
+
+#comments form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+      #comments input,#comments textarea {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        border-radius: 10px;
+        border: 1px solid hsl(220, 20%, 50%);
+      }
+
+      #comments form button {
+        padding: 0.75rem;
+        font-size: 1.1rem;
+        max-width: 190px;
+        border: none;
+        background-color: hsl(220, 70%, 50%);
+        color: white;
+      }
+      #comments form button:hover {
+        background-color: hsl(220, 70%, 60%);
+
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <a href="../index.html" id="logo">LOGO</a>
+
+      <nav>
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main>
+      <section id="article">
+        <div class="header">
+          <img src="../assets/img/fantasy.jpg" alt="" />
+          <div class="wrap">
+          <h1>Best Fantasy RPG Games to Play in 2022</h1>
+          <div class="details">
+            <div class="author">
+              <img src="../assets/icons/person.svg" alt="" /><span
+                >John Doe</span
+              >
+            </div>
+            <div class="time">
+              <img src="../assets/icons/clock.svg" alt="" />
+              <p>November 20, 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae est ex tenetur neque, accusantium consequuntur earum perspiciatis quae. Impedit, beatae nulla. Similique expedita, aspernatur culpa officiis provident debitis voluptatum perferendis voluptatem corporis suscipit et nesciunt voluptas tempore sit obcaecati sunt.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptate officia! Voluptas ab necessitatibus consequuntur illo libero nisi explicabo non, itaque quos! Tenetur, eos? Molestias alias amet, placeat veniam eligendi ipsum mollitia vitae architecto adipisci quo voluptate earum aperiam reprehenderit dicta labore facere repellendus aut. Eos numquam totam dolore aliquid.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugit sint, reprehenderit placeat recusandae provident obcaecati unde illo exercitationem aperiam eum doloremque perferendis rem corrupti, repellendus similique id sapiente ipsa! Incidunt iste magnam maiores, autem totam aspernatur saepe vero et?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quod quis accusamus atque ratione sint temporibus eius doloribus, dolorem impedit rerum necessitatibus aut nisi porro similique nam illo velit in.</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, voluptate officia! Voluptas ab necessitatibus consequuntur illo libero nisi explicabo non, itaque quos! Tenetur, eos? Molestias alias amet, placeat veniam eligendi ipsum mollitia vitae architecto adipisci quo voluptate earum aperiam reprehenderit dicta labore facere repellendus aut. Eos numquam totam dolore aliquid.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus soluta rem maiores facere sit aliquam fuga quos ratione expedita voluptate.</p>
+        </div>
+      </section>
+
+      <section id="comments">
+        <h2>Your Comment</h2>
+        <form>
+          <input placeholder="name" type="text" id="name">
+          <textarea id="comment" placeholder="comment" rows="4"></textarea> 
+          <button class="btn" type="submit">Send</button>
+        </form>
+        
+        <h2>Comments</h2>
+        <section class="comment-list">
+          <article>
+            <div class="header">
+              <p class="name">Mary Smith</p>
+              <p>10 days ago</p>
+            </div>
+            <div class="main">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
+            </div>
+            <div class="footer">
+              <button>up</button>
+              <button>do</button>
+              <button>Reply</button>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
