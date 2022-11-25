@@ -1,11 +1,13 @@
 /* ----- CONTACT US ----- */
-
-#contact {
+#main {
   margin-bottom: 40rem;
 }
 
+#contact {
+}
+
 #contact h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 #contact .wrap {
@@ -96,4 +98,37 @@
 }
 #contact .phone-mail p {
   font-size: 1.1rem;
+}
+
+#contact .map-location {
+  padding-top: 5rem;
+}
+
+#contact .map-location img {
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+#contact .address {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: hsl(220, 18%, 45%);
+  font-weight: 600;
+}
+
+#contact .socials {
+  padding-top: 5rem;
+}
+
+#contact .socials .list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#contact .socials .list a {
+  background-color: hsl(220, 17%, 93%);
+  padding: 1rem;
+  border-radius: 10px;
 }
