@@ -15,7 +15,11 @@
         font-size: 2.25rem;
       }
 
-    
+      #article .cover {
+        min-height: 400px;
+        max-height: 70vh;
+        object-fit: cover;
+      }
 
       #article .wrap {
         margin-top: 1rem;
@@ -81,6 +85,7 @@
         font-size: 1.25rem;
         border-radius: 10px;
         border: 1px solid hsl(220, 20%, 50%);
+        resize: vertical;
       }
 
       #comments form button {
@@ -93,7 +98,35 @@
       }
       #comments form button:hover {
         background-color: hsl(220, 70%, 60%);
+      }
 
+      #comments .comment-list {
+        margin-top: 1.5rem;
+      }
+
+      #comments .comment {
+        background-color: hsl(220, 20%, 95%);
+        padding: 1rem;
+        border-radius: 10px;
+        
+      }
+
+      #comments .comment .header {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      #comments .comment .main {
+        margin-block: 0.7rem;
+      }
+
+      #comments .comment .name {
+        font-weight: 700;
+      }
+
+      #comments .comment .time {
+        color: hsl(220, 20%, 40%);
+        font-size: 0.9rem;
       }
     </style>
   </head>
@@ -106,7 +139,7 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="../blog.html">Blog</a></li>
         </ol>
       </nav>
     </header>
@@ -114,7 +147,7 @@
     <main>
       <section id="article">
         <div class="header">
-          <img src="../assets/img/fantasy.jpg" alt="" />
+          <img class="cover" src="../assets/img/fantasy.jpg" alt="" />
           <div class="wrap">
           <h1>Best Fantasy RPG Games to Play in 2022</h1>
           <div class="details">
@@ -141,7 +174,7 @@
       </section>
 
       <section id="comments">
-        <h2>Your Comment</h2>
+        <h2>Send Your Comment</h2>
         <form>
           <input placeholder="name" type="text" id="name">
           <textarea id="comment" placeholder="comment" rows="4"></textarea> 
@@ -150,10 +183,10 @@
         
         <h2>Comments</h2>
         <section class="comment-list">
-          <article>
+          <article class="comment">
             <div class="header">
               <p class="name">Mary Smith</p>
-              <p>10 days ago</p>
+              <p class="time">10 days ago</p>
             </div>
             <div class="main">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi non minus eos delectus earum vero enim consequatur eum nemo a?
