@@ -345,10 +345,17 @@ nav li a:hover {
   align-items: center;
 }
 
-#careers .cards > a > span {
+#careers .apply {
   font-size: 0.95rem;
   border-bottom: 2px solid;
   margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 6px;
+  align-items: center;
+  gap: 0.25rem;
+}
+#careers .apply:hover {
+  color: hsl(210, 48%, 50%);
 }
 
 #careers .cards > a:hover {
