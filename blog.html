@@ -2,22 +2,70 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Blog</title>
+
+    <style>
+      #title,
+      #articles {
+        padding-block: 2rem;
+        max-width: 1300px;
+        margin-inline: auto;
+        padding-inline: 2rem;
+      }
+
+      #title {
+        text-align: center;
+      }
+
+      #title h1 {
+        font-size: 3rem;
+      }
+
+      #articles article {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 1.5rem;
+      }
+
+      #articles h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+
+      #articles img {
+        border-radius: 10px;
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <span id="logo">LOGO</span>
       <nav>
         <ol>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ol>
       </nav>
     </header>
+
+    <section id="title">
+      <h1>Blog</h1>
+      <p>Latest gaming news</p>
+    </section>
+
+    <section id="articles">
+      <article>
+        <img src="assets/img/b2.jpg" alt="" />
+        <div>
+          <h2>Video Game Trends: What Four Decades of Gaming Reveal</h2>
+          <p>posted by John Doe</p>
+        </div>
+      </article>
+    </section>
   </body>
 </html>
