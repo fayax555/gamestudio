@@ -4,13 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      
-    </style>
+    <style></style>
     <title>About Us</title>
+    <style>
+      #about h1 {
+        font-size: 2rem;
+      }
+      @media (min-width: 800px) {
+        #about h1 {
+          font-size: 3rem;
+        }
+      }
+
+      #main .header h1,
+      #main .header > p {
+        text-align: center;
+        max-width: 70ch;
+        margin-inline: auto;
+      }
+
+      #main {
+        margin-top: 4rem;
+        margin-bottom: 30rem;
+      }
+
+      #main p {
+        font-size: 1.2rem;
+        color: hsl(220, 20%, 30%);
+      }
+
+      #main .middle {
+        margin-top: 6rem;
+      }
+
+      #main img {
+        border-radius: 10px;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      #main .item {
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+      @media (min-width: 800px) {
+        #main .item {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      #main .item .texts {
+        display: grid;
+        gap: 1rem;
+      }
+
+      #main .item .texts h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      #faq h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    </style>
   </head>
 
-  <body>
+  <body id="about">
     <header id="header">
       <a href="index.html" id="logo">Bioflux Games</a>
       <nav>
@@ -23,6 +84,63 @@
       </nav>
     </header>
 
-    <main></main>
+    <main id="main">
+      <section class="header">
+        <h1>We are Bioflux Games</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+          aperiam ab ipsum voluptas, maxime excepturi facilis aliquam veniam
+          voluptatem laboriosam sit, nobis consequatur accusamus non esse
+        </p>
+      </section>
+
+      <div class="middle">
+        <section class="item">
+          <div class="texts">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              distinctio pariatur consequatur nihil, similique consectetur
+              quisquam impedit officiis minus iste?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              minima recusandae voluptas est enim quos aliquid dolores porro
+              esse ad? Quisquam corporis alias itaque incidunt
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
+              quidem autem voluptates iste explicabo optio.
+            </p>
+          </div>
+          <img src="assets/img/about-1.jpg" alt="" />
+        </section>
+
+        <section class="item">
+          <img src="assets/img/about-2.jpg" alt="" />
+          <div class="texts">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+              distinctio pariatur consequatur nihil, similique consectetur
+              quisquam impedit officiis minus iste?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+              minima recusandae voluptas est enim quos aliquid dolores porro
+              esse ad? Quisquam corporis alias itaque incidunt
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet,
+              quidem autem voluptates iste explicabo optio.
+            </p>
+          </div>
+        </section>
+
+        <section id="faq">
+          <h2>FAQ</h2>
+        </section>
+      </div>
+    </main>
   </body>
 </html>

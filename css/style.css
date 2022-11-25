@@ -56,7 +56,8 @@ a {
 #header,
 #title,
 #articles,
-#article {
+#article,
+#main {
   max-width: 1300px;
   margin-inline: auto;
   padding: 2rem 1rem;
@@ -68,7 +69,8 @@ a {
   #careers,
   #contact,
   #header,
-  #article {
+  #article,
+  #main {
     padding: 2rem;
   }
 }
