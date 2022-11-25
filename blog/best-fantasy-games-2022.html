@@ -125,9 +125,13 @@
         content: '';
         position: absolute;
         border-left: 1px solid;
-        inset: 0;
+        top: 0;
+        bottom: -15px;
         left: -20px;
         color: hsl(220, 20%, 90%);
+      }
+      #comments .comment.level-2.last-reply::before {
+        bottom: 0px;
       }
 
       #comments .comment.level-2 .reply-btn {
@@ -272,7 +276,7 @@
             </div>
           </article>
 
-          <article class="comment level-2">
+          <article class="comment level-2 last-reply">
             <div class="header">
               <p class="name">Yoosuf Ali</p>
               <p class="time">1 day ago</p>
