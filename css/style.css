@@ -74,6 +74,10 @@ a {
   }
 }
 
+#home h1 {
+  font-family: myfont, sans-serif;
+}
+
 #header {
   padding: 0 1rem;
   display: flex;
@@ -318,7 +322,7 @@ nav li a:hover {
 /* ---- HERO SECTION ---- */
 .hero-wrap {
   background: url('../assets/img/hero-bg.webp') no-repeat center center/cover;
-  height: 100vh;
+  min-height: 100vh;
   color: hsl(220, 76%, 96%);
   display: grid;
   align-content: center;
@@ -332,7 +336,7 @@ nav li a:hover {
   position: absolute;
   inset: 0;
   background-color: hsla(220, 98%, 21%, 0.7);
-  height: 100vh;
+  min-height: 100vh;
   z-index: -1;
 }
 

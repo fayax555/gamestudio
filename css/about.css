@@ -33,7 +33,7 @@
   margin-inline: auto;
   display: grid;
   gap: 1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
 }
 
 #about .middle .first h2 {
@@ -45,7 +45,7 @@
   display: grid;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 @media (min-width: 800px) {
   #about .item {
