@@ -302,8 +302,9 @@ nav li a:hover {
   color: hsl(220, 19%, 38%);
 }
 
-#careers .btn {
-  background-color: hsl(220, 49%, 28%);
+#careers .btn,
+#games .btn {
+  background-color: hsl(220, 40%, 28%);
   color: white;
   font-weight: 600;
   padding: 0.75rem;
@@ -315,7 +316,8 @@ nav li a:hover {
   transition: 0.15s;
 }
 
-#careers .btn:hover {
+#careers .btn:hover,
+#games .btn:hover {
   background-color: hsl(220, 89%, 58%);
 }
 
