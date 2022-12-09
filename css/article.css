@@ -61,9 +61,7 @@
 
 #comments {
   max-width: 75ch;
-  margin-inline: auto;
-  margin-top: 3rem;
-  margin-bottom: 30rem;
+  margin: 3rem auto 5rem;
   padding-inline: 1rem;
 }
 
