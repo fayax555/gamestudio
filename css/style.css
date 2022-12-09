@@ -43,11 +43,6 @@ a {
   border: none;
 }
 
-#logo {
-  font-family: metal-mania, sans-serif;
-  font-size: 1.75rem;
-}
-
 #hero,
 #team,
 #games,
@@ -82,13 +77,82 @@ a {
   padding: 0 1rem;
   display: flex;
   align-items: center;
+  padding-block: 1rem;
   justify-content: space-between;
+}
+#header #toggle {
+  display: none;
+}
+
+/* ---- ---- */
+
+#logo {
+  font-family: metal-mania, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+nav {
+  display: none;
+}
+
+nav {
+  position: absolute;
+  inset: 70px 10px;
+  height: 100%;
+}
+
+nav ol {
+  background-color: hsl(220, 51%, 42%);
+  border-radius: 20px;
+  padding-block: 2rem;
+}
+
+nav li {
+  list-style: none;
+  text-align: center;
+}
+
+nav li a {
+  text-decoration: none;
+  color: hsl(220, 31%, 32%);
+  padding-block: 1.5rem;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav li a:hover {
+  color: hsl(220, 86%, 90%);
+}
+
+#header #toggle:checked + nav {
+  display: block;
+}
+#header .menu-icon {
+  font-size: 1.75rem;
 }
 @media (min-width: 800px) {
   #header {
     padding: 0 2rem;
   }
+  #header .menu-icon {
+    display: none;
+  }
+  nav {
+    position: revert;
+    display: revert;
+  }
+
+  nav ol {
+    display: flex;
+    gap: 3rem;
+    background-color: revert;
+  }
 }
+
+/* --------- */
 
 #team h2,
 #games h2,
@@ -214,35 +278,6 @@ a {
   grid-template-columns: repeat(3, 25px);
   gap: 0.75rem;
   justify-content: center;
-}
-
-/* ---- ---- */
-
-#logo {
-  font-weight: 800;
-}
-
-nav ol {
-  display: flex;
-  gap: 3rem;
-}
-
-nav li {
-  list-style: none;
-}
-
-nav li a {
-  text-decoration: none;
-  color: hsl(220, 31%, 32%);
-  padding-block: 2rem;
-  border-radius: 10px;
-  display: block;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-nav li a:hover {
-  color: hsl(220, 48%, 50%);
 }
 
 /* ---- Career ---- */
