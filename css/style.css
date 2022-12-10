@@ -146,7 +146,6 @@ nav li a:hover {
     position: revert;
     display: revert;
   }
-
   nav ol {
     display: flex;
     gap: 0.5rem;
@@ -254,9 +253,9 @@ nav li a:hover {
 }
 
 #team .cards > article {
-  background-color: hsl(220, 36%, 97%);
+  background-color: hsl(220, 36%, 93%);
   border-radius: 10px;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   display: grid;
   gap: 0.4rem;
 }
@@ -427,7 +426,7 @@ footer {
   max-width: 1300px;
   margin-inline: auto;
   padding: 3rem 2rem;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 
 footer .logo {

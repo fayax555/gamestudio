@@ -1,7 +1,6 @@
 /* ----- CONTACT US ----- */
 #contact #main {
   margin-top: 2rem;
-  margin-bottom: 40rem;
 }
 
 #contact h2 {
@@ -115,17 +114,21 @@
   font-weight: 600;
 }
 
-#contact .socials {
+#contact .address span {
+  color: hsl(220, 17%, 60%);
+}
+
+#contact .contact-socials {
   padding-top: 5rem;
 }
 
-#contact .socials .list {
+#contact .contact-socials .list {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
-#contact .socials .list a {
+#contact .contact-socials .list a {
   background-color: hsl(220, 17%, 93%);
   padding: 1rem;
   border-radius: 10px;

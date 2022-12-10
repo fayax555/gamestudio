@@ -105,7 +105,7 @@
 }
 
 #comments .comment {
-  background-color: hsl(220, 20%, 96%);
+  background-color: hsl(220, 20%, 95%);
   padding: 1rem;
   border-radius: 10px;
 }
@@ -159,7 +159,7 @@
 }
 
 #comments .react {
-  background-color: hsl(220, 20%, 85%);
+  background-color: hsl(220, 20%, 83%);
   padding: 0.5rem;
   display: flex;
   gap: 0.5rem;
@@ -167,7 +167,7 @@
 }
 
 #comments .react:hover {
-  background-color: hsl(220, 20%, 90%);
+  background-color: hsl(220, 20%, 87%);
 }
 
 #comments .react img {
@@ -179,12 +179,12 @@
 }
 
 #comments .reply-btn {
-  background-color: hsl(220, 20%, 85%);
+  background-color: hsl(220, 20%, 82%);
   width: 100px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-left: 1rem;
 }
 #comments .reply-btn:hover {
-  background-color: hsl(220, 20%, 90%);
+  background-color: hsl(220, 20%, 85%);
 }
