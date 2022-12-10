@@ -1,5 +1,6 @@
 #about h1 {
   font-size: 2rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 800px) {
   #about h1 {
@@ -20,7 +21,7 @@
 
 #about p:not(footer .text) {
   font-size: 1.2rem;
-  color: hsl(220, 20%, 30%);
+  color: hsl(240, 20%, 30%);
 }
 
 #about .middle {
@@ -85,7 +86,7 @@
 
 #about details {
   padding: 1.2rem 0;
-  border-bottom: 1px solid hsl(220, 5%, 91%);
+  border-bottom: 1px solid hsl(240, 5%, 91%);
   padding-left: 2.5px;
   max-width: 90ch;
   margin: auto;
@@ -93,7 +94,7 @@
 
 #about details summary {
   list-style: none;
-  color: hsl(220, 29%, 16%);
+  color: hsl(240, 29%, 16%);
   cursor: pointer;
   display: grid;
   grid-template-columns: auto auto;
@@ -101,7 +102,7 @@
   align-items: center;
 }
 #about details summary:hover {
-  color: hsl(220, 29%, 16%);
+  color: hsl(240, 29%, 16%);
 }
 
 #about details summary span {
@@ -109,7 +110,7 @@
 }
 
 #about details[open] summary {
-  color: hsl(220, 29%, 16%);
+  color: hsl(240, 29%, 16%);
   font-weight: 700;
   padding-bottom: 9px;
 }
@@ -123,7 +124,7 @@
 }
 
 #about details > p {
-  color: hsl(220, 6%, 50%);
+  color: hsl(240, 6%, 50%);
   letter-spacing: 0.003em;
   line-height: 18px;
   font-size: 1.2rem;

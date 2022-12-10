@@ -9,7 +9,7 @@
 }
 @media (min-width: 800px) {
   #article h1 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1400px) {
@@ -76,7 +76,11 @@
 #comments {
   max-width: 75ch;
   margin: 3rem auto 5rem;
-  padding-inline: 1rem;
+}
+@media (max-width: 800px) {
+  #comments {
+    padding-inline: 1rem;
+  }
 }
 
 #comments h2 {
@@ -96,7 +100,7 @@
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 10px;
-  border: 1px solid hsl(220, 20%, 50%);
+  border: 1px solid hsl(240, 20%, 50%);
   resize: vertical;
 }
 
@@ -105,11 +109,11 @@
   font-size: 1.1rem;
   max-width: 190px;
   border: none;
-  background-color: hsl(220, 70%, 50%);
+  background-color: hsl(240, 70%, 50%);
   color: white;
 }
 #comments form button:hover {
-  background-color: hsl(220, 70%, 60%);
+  background-color: hsl(240, 70%, 60%);
 }
 
 #comments .comment-list {
@@ -119,7 +123,7 @@
 }
 
 #comments .comment {
-  background-color: hsl(220, 20%, 95%);
+  background-color: hsl(214, 10%, 95%);
   padding: 1rem;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -140,7 +144,7 @@
   top: 0;
   bottom: -15px;
   left: -20px;
-  color: hsl(220, 20%, 90%);
+  color: hsl(240, 20%, 90%);
 }
 #comments .comment.level-2.last-reply::before {
   bottom: 0px;
@@ -164,7 +168,7 @@
 }
 
 #comments .comment .time {
-  color: hsl(220, 20%, 40%);
+  color: hsl(240, 20%, 40%);
   font-size: 0.9rem;
 }
 
@@ -174,7 +178,7 @@
 }
 
 #comments .react {
-  background-color: hsl(220, 20%, 83%);
+  background-color: hsl(214, 22%, 88%);
   padding: 0.5rem;
   display: flex;
   gap: 0.5rem;
@@ -182,7 +186,7 @@
 }
 
 #comments .react:hover {
-  background-color: hsl(220, 20%, 87%);
+  background-color: hsl(214, 22%, 85%);
 }
 
 #comments .react img {
@@ -194,12 +198,12 @@
 }
 
 #comments .reply-btn {
-  background-color: hsl(220, 20%, 82%);
+  background-color: hsl(214, 22%, 84%);
   width: 100px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-left: 1rem;
 }
 #comments .reply-btn:hover {
-  background-color: hsl(220, 20%, 85%);
+  background-color: hsl(214, 20%, 80%);
 }
