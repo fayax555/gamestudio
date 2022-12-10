@@ -70,7 +70,7 @@
 }
 
 #article .content p {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 #comments {
@@ -122,6 +122,7 @@
   background-color: hsl(220, 20%, 95%);
   padding: 1rem;
   border-radius: 10px;
+  font-size: 1.1rem;
 }
 
 #comments .comment:not(.level-2) {
