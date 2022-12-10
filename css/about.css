@@ -16,10 +16,9 @@
 
 #main {
   margin-top: 4rem;
-  margin-bottom: 30rem;
 }
 
-#about p {
+#about p:not(footer .text) {
   font-size: 1.2rem;
   color: hsl(220, 20%, 30%);
 }
@@ -33,7 +32,7 @@
   margin-inline: auto;
   display: grid;
   gap: 1rem;
-  padding-bottom: 7rem;
+  padding-bottom: 10rem;
 }
 
 #about .middle .first h2 {
@@ -45,7 +44,7 @@
   display: grid;
   gap: 2rem;
   align-items: center;
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
 }
 @media (min-width: 800px) {
   #about .item {
@@ -73,6 +72,7 @@
   margin-bottom: 0.25rem;
 }
 
+/* ----- FAQ ----- */
 #faq {
   padding-top: 2rem;
 }
@@ -83,7 +83,6 @@
   margin-bottom: 1rem;
 }
 
-/* ---- FAQ ---- */
 #about details {
   padding: 1.2rem 0;
   border-bottom: 1px solid hsl(220, 5%, 91%);

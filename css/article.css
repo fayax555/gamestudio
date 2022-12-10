@@ -9,6 +9,11 @@
 }
 @media (min-width: 800px) {
   #article h1 {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 1400px) {
+  #article h1 {
     font-size: 2.5rem;
   }
 }
@@ -17,6 +22,15 @@
   min-height: 400px;
   max-height: 70vh;
   object-fit: cover;
+
+  max-width: 75ch;
+  margin-inline: auto;
+}
+@media (min-width: 1400px) {
+  #article .cover {
+    max-width: revert;
+    padding: revert;
+  }
 }
 
 #article .wrap {
